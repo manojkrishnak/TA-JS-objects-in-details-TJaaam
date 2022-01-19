@@ -37,3 +37,69 @@
 - Check the `fullName` using getter
 
 - Check the `nameContains` method
+
+
+```js
+
+class Square{
+    constructor(side){
+        this.width = side ;
+         this.height = side;
+    }
+    description(){
+        alert(`The square is ${width} x ${height}`);
+    }
+    calcArea(){
+        return this.width * this.height;
+    }
+    get area(){
+        return this.width * this.height;
+    }
+    set area(area){
+        this.width = this.height = Math.sqrt(area)
+    }
+    static isEqual(a, b){
+        return ((a.width * a.height) === (b.width * b.height)) ? true : false;
+    }
+}
+
+let s1 = new Square(7);
+let s2 = new Square(10);
+
+//Square.isEqual({width: 5, height: 5}, {width: 5, height: 6})
+//s1.area
+//s2.area
+//Square.isEqual(s1, s2)
+```
+
+
+```js
+
+class User{
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName(){
+        return this.firstName + " " + this.lastName;
+    }
+
+    set fullName(name){
+        if(name.length < 5){
+            alert(`Full name should be more than 5 characters`);
+            return;
+        }
+        let splittedName = name.split(" ");
+        this.firstName = splittedName[0];
+        this.lastName = splittedName[1];
+    }
+    nameContains(name){
+        let fullName = this.firstName + " " +this.lastName;
+        return fullName.includes(name);
+    }
+}
+//3. u.fullName = "manoj krishna"
+//4. u.nameContains("manoj krishna")
+let u1 = new User();
+let u2 = new User("manoj", "krishna");
+```
