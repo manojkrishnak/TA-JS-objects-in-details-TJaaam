@@ -5,7 +5,7 @@
 
 // myMap function goes here
 
-// Test the myMap function you created above
+// Test the myMap cccfunction you created above
 
 let numbers = [1, 5, 6, 8, 9];
 let words = 'quick brown fox jumped over a lazy dog'.split(
