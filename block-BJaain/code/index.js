@@ -1,15 +1,16 @@
 console.log(this.document === document); // Output
+//true
 
 // ------------
 
-console.log(this === window); //Output
+console.log(this === window); //true
 
 // ------------
 
 var myFunction = function () {
   console.log(this);
 };
-myFunction(); // Output
+myFunction(); // window
 
 // ------------
 
@@ -17,7 +18,7 @@ function f1() {
   'use strict';
   return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); //false
 
 // ------------
 
@@ -26,7 +27,7 @@ function foo() {
   console.log(this === window);
 }
 
-foo(); //Output ??
+foo(); //true
 
 // ------------
 
@@ -34,7 +35,7 @@ foo(); //Output ??
 (function () {
   console.log('Anonymous function invocation');
   console.log(this === window);
-})(); //Output
+})(); //true
 
 // ------------
 
@@ -42,7 +43,7 @@ var myObject = {};
 myObject.someMethod = function () {
   console.log(this);
 };
-myObject.someMethod(); //Value Of This
+myObject.someMethod(); //someMethod
 
 // ------------
 
@@ -238,7 +239,7 @@ function print() {
 }
 
 let printNameBob = print.bind(bobObj);
-console.log(printNameBob()); // output??
+console.log(printNameBob()); // bob
 
 // -------------------
 
