@@ -9,7 +9,7 @@ Convert the below requirements into inheritance using:
 
 Properties:
 
-- `location`
+- `location`   
 - `numberOfLegs`
 
 Methods
