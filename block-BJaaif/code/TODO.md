@@ -13,7 +13,7 @@ Create a function that accepts two inputs (name and age) and returns an object. 
 
 #### Challenge 1/3
 
-Inside `personStore` object, create a property `greet` where the value is a function that logs "hello".
+Inside `personStore  ` object, create a property `greet` where the value is a function that logs "hello".
 
 #### Challenge 2/3
 
