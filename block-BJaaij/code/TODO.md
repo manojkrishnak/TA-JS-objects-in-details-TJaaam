@@ -9,7 +9,7 @@
 2. Category
 3. Author
 4. isRead (default to `false`)
-5. finishedDate
+5. finishedDate   
 
 Book class will have the following methods:
 
